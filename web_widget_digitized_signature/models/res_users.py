@@ -15,13 +15,13 @@ class ResUsers(models.Model):
         string='Signature',
     )
 
-    @api.model
-    def create(self, vals):
-        res = super(ResUsers, self).create(vals)
-        res._track_signature(vals, 'signature_image')
-        return res
+#    @api.model
+#    def create(self, vals):
+#        res = super(ResUsers, self).create(vals)
+#        res._track_signature(vals, 'signature_image')
+#        return res
 
-    @api.multi
-    def write(self, vals):
-        self._track_signature(vals, 'signature_image')
-        return super(ResUsers, self).write(vals)
+#    @api.multi
+#    def write(self, vals):
+#        self._track_signature(vals, 'signature_image')
+#        return super(ResUsers, self).write(vals)
